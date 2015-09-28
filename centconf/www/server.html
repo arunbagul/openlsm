@@ -1,0 +1,56 @@
+	<table width="68%" class="tablesorter" id="myTable">
+	    <thead>
+	     <tr>
+	        <th width="5%" class="header" style="width: 2%;">#</th>
+	        <th width="16%" class="header" style="width: 20%;"><span class="header">Instance Name</span></th>
+	        <th width="25%" class="header" style="width: 25%;"><span class="header">Description</span></th>
+	        <th width="13%" class="header" style="width: 20%;">Domain Names</th>
+		<th width="13%" class="header" style="width: 10%;">Status</th>
+	     </tr>
+	    </thead>
+	
+	<tbody>
+	
+	<tr class='even'>
+	<td>1</td>
+	<td><a href='haproxy.pl'>world.com</a></td>
+	<td>World web site</td>
+	<td>id.world.com,blog.world.com,uk.world.com</td>
+	<td>Enabled</td>
+	</tr>
+	
+	<tr class='odd'>
+	<td>2</td>
+	<td><a href='haproxy.pl'>world.de</a></td>
+	<td>World web German site</td>
+	<td>blog.world.de,world.de</td>
+	<td>Enabled</td>
+	</tr>
+	
+	<tr class='even'>
+	<td>3</td>
+	<td><a href='haproxy.pl'>world.fr</a></td>
+	<td>Galm France web site</td>
+	<td>blog.world.fr,world.fr</td>
+	<td>Enabled</td>
+	</tr>
+	
+	<tr class='odd'>
+	<td>4</td>
+	<td><a href='haproxy.pl'>brash.com</a></td>
+	<td>Brash site</td>
+	<td>brash.com</td>
+	<td>Enabled</td>
+	</tr>
+	
+	</tbody>
+	</table>
+	
+	<fieldset>
+		<a href="haproxy.pl?type=add_server" style="text-decoration:none">
+		<input type="image"  src='../images/button/add_group.png' value="Add Server" /></a>
+	
+		<a href="centconf.pl?type=group" style="text-decoration:none"><input type="image" class="submit-green" value="Add HA Server" /></a>
+		<a href="centconf.pl?type=group" style="text-decoration:none"><input type="image" class="submit-green" value="Add Instance" /></a>
+	</fieldset>
+	

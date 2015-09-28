@@ -1,0 +1,31 @@
+<xml>
+
+<section>
+	<name>global</name>
+        <log>127.0.0.1 local0</log>	
+        <log>127.0.0.1 local1 notice</log>
+        <maxconn>25000</maxconn>
+        <debug>debug</debug>
+        <user>prod</user>
+        <group>prod</group>
+</section>
+
+<section>
+	<name>defaults</name>
+        <log>global</log>
+        <mode>http</mode>
+        <option>tcplog</option>
+        <option>dontlognull</option>
+        <option>httpclose</option>
+        <retries>3</retries>
+        <option>redispatch</option>
+        <maxconn>25000</maxconn>
+        <contimeout>5000</contimeout>
+        <clitimeout>50000</clitimeout>
+        <srvtimeout>50000</srvtimeout>
+        <stats>enable</stats>
+	<comment>#HAproxy stats user name and password</comment>
+        <stats>auth admin:password</stats> 
+</section>
+
+</xml>

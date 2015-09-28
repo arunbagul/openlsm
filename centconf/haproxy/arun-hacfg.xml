@@ -1,0 +1,35 @@
+<xml>
+
+<comment>#HAproxy Instance configuration file</comment>
+<instance_name>arun</instance_name>
+<comment>#VIP Configurations</comment>
+
+<instance>
+	<comment>#Configuration for beta.world.com</comment>
+	<name>beta.world.com</name>
+ 	<listen>VIP:beta.world.com:10.0.4.20:80</listen>
+    	<bind>10.0.4.20:80</bind>
+    	<log>global</log>
+    	<maxconn>25000</maxconn>
+    	<mode>http</mode>
+    	<option>forwardfor</option>
+    	<balance>leastconn</balance>
+   	<server>REAL:myhost130:10.0.0.230:80 10.0.0.230:80 check</server>
+   	<server>REAL:myhost131:10.0.0.231:80 10.0.0.231:80 check</server>
+</instance>
+
+<instance>
+	<comment>#Configuration for blogs.world.com</comment>
+	<name>blogs.world.com</name>
+ 	<listen>listen VIP:blogs.world.com:10.0.4.23:80</listen> 
+	<bind>10.0.4.23:80</bind>
+    	<log>global</log>
+    	<maxconn>25000</maxconn>
+    	<mode>http</mode>
+    	<option>forwardfor</option>
+    	<balance>leastconn</balance>
+   	<server>REAL:myhost101:10.0.0.201:80 10.0.0.201:80 check</server>
+   	<server>REAL:myhost102:10.0.0.202:80 10.0.0.202:80 check</server>
+</instance>
+
+</xml>
